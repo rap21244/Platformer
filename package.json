@@ -1,0 +1,16 @@
+{
+  "name": "platformer",
+  "version": "1.0.0",
+  "description": "hello",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "phaser": "^3.60.0",
+    "vite": "^4.3.5"
+  }
+}
