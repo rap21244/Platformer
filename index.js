@@ -12,6 +12,8 @@ const RATIO = Math.max(
 const HEIGHT = 720;
 const WIDTH = RATIO * HEIGHT;
 
+console.log("hello")
+
 window.addEventListener("load", () => {
 	/**
 	 * @type {Phaser.Types.Core.GameConfig}
