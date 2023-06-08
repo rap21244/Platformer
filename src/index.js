@@ -1,9 +1,8 @@
 import Phaser from "phaser";
 
-// import { Preload } from "./scenes/preload";
-// import { Menu } from "./scenes/menu";
-// import { Game } from "./scenes/game";
-// import { Ui } from "./scenes/ui";
+import { Preload } from "./scenes/preload";
+import { Game } from "./scenes/game";
+import { Ui } from "./scenes/ui";
 
 const RATIO = Math.max(
 	window.innerWidth / window.innerHeight,
@@ -11,8 +10,6 @@ const RATIO = Math.max(
 );
 const HEIGHT = 720;
 const WIDTH = RATIO * HEIGHT;
-
-console.log("hello")
 
 window.addEventListener("load", () => {
 	/**
@@ -29,7 +26,7 @@ window.addEventListener("load", () => {
 		physics: {
 			default: "arcade",
 			arcade: {
-				gravity: { y: 0 },
+				gravity: { y: 600 },
 				debug: false
 			}
 		},
@@ -38,8 +35,8 @@ window.addEventListener("load", () => {
 			createContainer: true
 		},
 		backgroundColor: 0xaaaaaa,
-		pixelArt: false,
-		scene: []
+		pixelArt: true,
+		scene: [Preload, Game, Ui]
 	};
 
 	new Phaser.Game(config);
